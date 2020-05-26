@@ -1,7 +1,19 @@
 import { DETAILSPACE } from './../actions/actionTypes';
 
 const initialState = {
-  detail: {},
+  detail: {
+    address: {
+      street: '',
+      city: '',
+      country: '',
+      lat: '',
+      lng: ''
+
+    },
+    images: {
+      primary: ''
+    }
+  },
 };
 
 export const reducer = (state = initialState, action) => {

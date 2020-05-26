@@ -1,14 +1,20 @@
 import { LISTSPACE } from './../actions/actionTypes';
 
 const initialState = {
-  places: {},
+  places: {
+    id: '',
+    address: {
+      lat: 0,
+      lng: 0
+    }
+
+  },
   placeByName: {}
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LISTSPACE.FETCH_SUCCESS:
-        console.log(action.payload.data);
       return {
         ...state,
         places: action.payload.data
