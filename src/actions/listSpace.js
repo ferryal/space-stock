@@ -23,13 +23,10 @@ function searchSuccess(data) {
 }
 
 export function fetchListSpace() {
-    console.log('masuk sini');
   return (dispatch) => {
-    axios.get('http://localhost:3001/place')
+    axios.get('https://rest-space.herokuapp.com/place')
     .then((res) => {
         if (res.status === 200) {
-            console.log('masuk sini 2');
-            console.log(res);
         dispatch(fetchListSuccess(res.data));
         } else {
         dispatch(fetchFailed());

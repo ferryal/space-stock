@@ -17,7 +17,7 @@ function fetchFailed(data) {
 
 export function fetchDetailSpace(id) {
   return (dispatch) => {
-    axios.get(`http://localhost:3001/place/${id}`)
+    axios.get(`https://rest-space.herokuapp.com/place/${id}`)
     .then((res) => {
         if (res.status === 200) {
         dispatch(fetchDetailSuccess(res.data));
